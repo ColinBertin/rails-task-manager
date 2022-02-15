@@ -1,12 +1,6 @@
 <div class="container">
   <h1 class="mt-4 mb-3">New task</h1>
-  <%= form_for(@task) do |f| %>
-    <%= f.label :title, class: 'form-label' %>
-    <%= f.text_field :title, class: 'form-control mb-3' %>
-    <%= f.label :details, class: 'form-label' %>
-    <%= f.text_area :details, class: 'form-control' %>
-    <%= f.submit class:"btn btn-primary mt-3"%>
-  <% end %>
+  <%= render "form", task: @task %>
 </div>
 
 <div class="container mt-4">
